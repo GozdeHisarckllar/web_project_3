@@ -58,8 +58,7 @@ import to index.css .vendor/normalize.css
 }
 
 .logo {
-  width: 190px;
-  height: 44px;
+  max-width: 190px;
 }
 
 .header__lang-links {
@@ -89,9 +88,25 @@ import to index.css .vendor/normalize.css
   text-decoration: underline;
 }
 
+@media screen and (max-width: 450px){
+
+  .header {
+    max-width: calc(100% - 32px);
+    margin: 0 16px;
+    padding-top: 20px;
+  }
+
+  .logo {
+    max-width: 156px;
+  }
+
+  .header__lang-link {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
 .lead {
-  max-width: calc(100% - 200px);
-  margin: 0 auto;
   padding: 58px 0 0;
 }
 
@@ -118,13 +133,13 @@ import to index.css .vendor/normalize.css
 }
 
 .lead__figure {
-  width: 100%;
+  max-width: calc(100% - 200px);
   margin: 0 auto;
 }
 
 .lead__image {
   display: block;
-  width: 100%;
+  max-width: 100%;
 }
 
 .lead__caption {
@@ -137,9 +152,34 @@ import to index.css .vendor/normalize.css
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 450px){
+  .lead {
+    max-width: 100%;
+    padding-top: 50px;
+  }
+
+  .lead__title {
+    max-width: calc(100% - 32px);
+    margin: 0 auto;/*16-->auto*/
+    font-size: 40px;
+    line-height: 1.10;
+  }
+
+  .lead__subtitle {
+    max-width: calc(100% - 32px);
+    margin: 16px 16px 40px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .lead__figure {
+    max-width: 100%;
+  }
+}
+
 .intro {
-  max-width: calc(100% - 200px);
-  margin: 0 auto;
+  max-width: 690px;
+  margin: 0 0 0 100px;
   padding: 92px 0 0;
   text-align: left;
 }
@@ -189,6 +229,20 @@ import to index.css .vendor/normalize.css
   font-weight: 400;
 }
 
+@media screen and (max-width: 450px){
+  .intro {
+     max-width: calc(100% - 32px);
+     margin: 0 auto;/*0 16px*/
+     padding-top: 64px;
+  }
+  .intro__title {
+    font-size: 32px;
+    line-height: 1.09;
+  }
+  .intro__text_type_highlight {
+    line-height: 1.25;
+  }/*list margin-top 34*/
+}  
 .photo-grid {
   padding: 92px 0 0;
 }
@@ -219,6 +273,9 @@ import to index.css .vendor/normalize.css
 }*/
 
 @media screen and (max-width: 450px){
+  .photo-grid {
+    padding-top: 64px;
+  }
   .photo-grid__list {
      max-width: calc(100% - 32px);
   }
@@ -288,15 +345,17 @@ import to index.css .vendor/normalize.css
   margin-top: 48px;
 }
 
-.place__column-image {
-  max-width: 460px;/*47*/
+/*.place__column-image {
+  max-width: 460px;/*47
   margin-right: 40px;
-}
+}*/
 
 .place__image {
   display: block;
-  width: 100%;
+  /*width: 100%;*/
   min-width: 320px;
+  max-width: 460px;/*47*/
+  margin-right: 40px;
 }
 
 .place__column-text {
@@ -391,14 +450,14 @@ import to index.css .vendor/normalize.css
     margin-top: 30px;
   }
 
-  .place__column-image {
+  .place__image {/*place__column-image*/
     max-width: 100%;
     margin: 0 auto 32px;
   }
 
   .place__column-text {
     max-width: calc(100% - 32px);
-    margin: 0 16px;
+    margin: 0 auto;/*instead of margin 0 16*/
   }
 
   .place__paragraph {
@@ -476,7 +535,7 @@ import to index.css .vendor/normalize.css
   }
 }
 
-@media screen and (max-width: 768px){/*950*/
+@media screen and (max-width: 768px){/*950*//*------------------------*/
   .cover__link {
     min-height: 480px;
   }
@@ -547,6 +606,7 @@ import to index.css .vendor/normalize.css
 @media screen and (max-width: 768px){
   .footer {
     max-width: calc(100% - 48px);/*calc*/
+    padding-top: 88px;
   }
   /*.footer__copyright {
    
