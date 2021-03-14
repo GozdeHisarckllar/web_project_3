@@ -18,15 +18,21 @@ From 768px to 1024px (from a tablet in portrait to a tablet in landscape).
 From 425px to 768px (from a large smartphone to a tablet in portrait).
 Up to 425px (mobile devices).
 
+.nojekyll file in the root of your project
 import to index.css .vendor/normalize.css
 .vendor/fonts/font.css*/
 .page {
-  /*1440*//*1280*/
-  max-width: 1440px;
-  margin: auto;
   background-color: #2A2C2F;
-  font-family: 'Inter', Arial, sans-serif;/*font-style normal*/
+  font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
+  overflow-x: hidden;
+}
+
+.page__container {
+  /*1440*//*1280*/
+  
+  max-width: 1184px;
+  margin: 0 auto;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -44,9 +50,9 @@ import to index.css .vendor/normalize.css
 }
 
 .header {
-  max-width: calc(100% - 296px);
+  max-width: calc(100% - 200px);
   margin: 0 auto;
-  padding: 34px 0 58px;
+  padding: 34px 0 0;
   display: flex;
   justify-content: space-between;
 }
@@ -79,13 +85,14 @@ import to index.css .vendor/normalize.css
   margin-right: 0;
 }
 
-.header__lang-link_underlined {
+.header__lang-link_active {
   text-decoration: underline;
 }
 
 .lead {
-  max-width: calc(100% - 296px);
+  max-width: calc(100% - 200px);
   margin: 0 auto;
+  padding: 58px 0 0;
 }
 
 .lead__title {
@@ -131,7 +138,7 @@ import to index.css .vendor/normalize.css
 }
 
 .intro {
-  max-width: calc(100% - 296px);
+  max-width: calc(100% - 200px);
   margin: 0 auto;
   padding: 92px 0 0;
   text-align: left;
@@ -188,7 +195,7 @@ import to index.css .vendor/normalize.css
 
 
 .photo-grid__list {
-  max-width: calc(100% - 96px);
+  max-width: 100%;/*calc(100% - 96px)*/
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -216,12 +223,13 @@ import to index.css .vendor/normalize.css
      max-width: calc(100% - 32px);
   }
 }  
+
 .places {
   padding: 92px 0 0;
 }
 
 .place {
-  max-width: calc(100% - 296px);
+  max-width: calc(100% - 200px);
   margin: 0 auto;
   padding: 81px 0 0;
   display: flex;
@@ -288,6 +296,7 @@ import to index.css .vendor/normalize.css
 .place__image {
   display: block;
   width: 100%;
+  min-width: 320px;
 }
 
 .place__column-text {
@@ -345,6 +354,61 @@ import to index.css .vendor/normalize.css
   margin-top: 29px;
 }
 
+@media screen and (max-width: 450px){
+  .places {
+    padding-top: 64px;
+  }
+  .place {
+     max-width: 100%;
+     margin: 0;
+     padding-top: 48px;
+  }
+  .place:nth-child(2n) {
+    padding-top: 48px;
+  }
+  .place__intro {
+    max-width: calc(100% - 32px);
+    margin: 0 16px;
+    flex-direction: column;
+  }
+
+  .place__title {
+    max-width: 100%;
+    font-size: 32px;
+    line-height: 1.09;
+    margin: 0;
+
+  }
+  .place__website {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .place__url-heading {
+    margin-bottom: 12px;
+  }
+  .place__description {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .place__column-image {
+    max-width: 100%;
+    margin: 0 auto 32px;
+  }
+
+  .place__column-text {
+    max-width: calc(100% - 32px);
+    margin: 0 16px;
+  }
+
+  .place__paragraph {
+    font-size: 16px;
+  }
+  .place__paragraph_details_maine {
+    margin-top: 25px;
+  }
+}  
+
 .cover {
   padding: 92px 0 0;
 }
@@ -352,7 +416,7 @@ import to index.css .vendor/normalize.css
 .cover__link {
   position: relative;
   display: block;
-  max-width: calc(100% - 96px);/*calc max-width*/
+  max-width: 100%;/*calc(100% - 96px);*/
   min-height: 740px;
   margin: 0 auto;
   background-image: url('./images/compressed/cover-historic-route.jpg');
@@ -419,8 +483,11 @@ import to index.css .vendor/normalize.css
 }
 
 @media screen and (max-width: 450px){/*450*/
+  .cover {
+    padding-top: 64px;
+  }
+  
   .cover__link {
-    max-width: 100%;
     min-height: 200px;
   }
 
@@ -434,9 +501,10 @@ import to index.css .vendor/normalize.css
     line-height: 1.14;
   }
 }
+
 .footer {
   padding: 92px 0 24px;
-  max-width: calc(100% - 96px);
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -489,7 +557,7 @@ import to index.css .vendor/normalize.css
 
 @media screen and (max-width: 450px){
   .footer {
-    max-width: 168px;
+    max-width: 168px;/*--->calc*/
     min-height: 198px;
     margin: 0 0 0 16px;
     padding: 64px 0 24px;
