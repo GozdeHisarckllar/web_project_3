@@ -1,0 +1,28 @@
+.place__column-image {
+    max-width: 460px;
+    min-width: 440px;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 1024px){
+    .place__column-image {
+        max-width: 440px;
+        min-width: 340px;
+        margin-right: 32px;
+      }
+}
+  
+@media screen and (max-width: 768px){
+    .place__column-image {
+        max-width: 340px;
+        min-width: 200px;
+        margin-right: 28px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .place__column-image {
+        max-width: 100%;
+        margin: 0 auto 32px;
+    }
+}

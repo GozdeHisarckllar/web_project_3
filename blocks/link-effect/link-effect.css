@@ -1,0 +1,7 @@
+.link-effect {
+    transition: opacity .3s ease-in-out;
+  }
+  
+  .link-effect:hover {
+    opacity: .8;
+  }

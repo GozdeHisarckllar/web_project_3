@@ -1,0 +1,56 @@
+@import url('./__intro/place__intro.css');
+@import url('./__title/place__title.css');
+@import url('./__website/place__website.css');
+@import url('./__url-heading/place__url-heading.css');
+@import url('./__link/place__link.css');
+@import url('./__description/place__description.css');
+@import url('./__column-image/place__column-image.css');
+@import url('./__image/place__image.css');
+@import url('./__column-text/place__column-text.css');
+@import url('./__paragraph/place__paragraph.css');
+@import url('./__paragraph/_details/place__paragraph_details_maine.css');
+@import url('./__paragraph/_details/place__paragraph_details_hampshire.css');
+@import url('./__paragraph/_details/place__paragraph_details_new-york.css');
+@import url('./__paragraph/_details/place__paragraph_details_erie.css');
+@import url('./__paragraph/_details/place__paragraph_details_ohio.css');
+@import url('./__paragraph/_cost/place__paragraph_cost_maine.css');
+@import url('./__paragraph/_cost/place__paragraph_cost_hampshire.css');
+@import url('./__paragraph/_cost/place__paragraph_cost_erie.css');
+@import url('./__paragraph/_cost/place__paragraph_cost_ohio.css');
+
+
+
+.place {
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    padding: 81px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.place:first-child {
+    padding: 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .place {
+      max-width: calc(100% - 96px);
+      padding-top: 80px;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .place {
+     max-width: calc(100% - 48px);
+     padding-top: 73px;
+    }
+}
+  
+@media screen and (max-width: 450px) {
+    .place {
+       max-width: 100%;
+       margin: 0;
+       padding-top: 48px;
+    }
+}  
