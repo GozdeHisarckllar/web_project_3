@@ -1,6 +1,5 @@
 .lead__caption {
-    max-width: 182px;
-    width: 100%;
+    display: inline-block;
     margin: 8px 0 0;
     font-weight: 400;
     font-size: 10px;

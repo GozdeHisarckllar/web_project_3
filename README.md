@@ -11,7 +11,7 @@ ___________________________
 
 * A front-end project for the Sprint 3 in the [Practicum by Yandex](https://practicum.yandex.com/) curriculum.
 
-* A single-page website/blog about traveling across the US. The content of this blog make the viewer take a road trip by stopping by the different regions across the USA. 
+* A single-page website/blog about traveling across the US. The content of this blog make the viewer take a road trip through stopping by the different regions across the USA. 
 
 **Description**
 
